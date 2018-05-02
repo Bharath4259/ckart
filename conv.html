@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>Cryto Tools</title>
+
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<!--     Fonts and icons     -->
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+		<link rel="stylesheet" href="conv_styles.css" />
+		<script src="conv_scripts.js"></script>
+		
+	</head>
+
+
+<body>
+    <div class="image-container set-full-height" style="background-image: url('http://demos.creative-tim.com/material-bootstrap-wizard/assets/img/wizard-book.jpg')">
+	    <!--   Creative Tim Branding   -->
+	    <a href="http://www.cryptocurrencykart.com/" target="_blank">
+	         <div class="logo-container">
+	            <div class="logo">
+	                <img src="logo_large.png">
+	            </div>
+	            <!--<div class="brand">
+	                Crypto Currency Kart	
+	            </div>-->
+	        </div>
+	    </a>
+
+		<!--  Made With Material Kit  -->
+		<a href="index.html" class="made-with-mk" target="_blank">
+			<div class="brand"><i class="material-icons">trending_up</i></div>
+			<div class="made-with">cck's <strong>CoinCAP</strong></div>
+		</a>
+		
+
+	    <!--   Big container   -->
+	    <div class="container">
+	        <div class="row">
+		        <div class="col-sm-8 col-sm-offset-2">
+		            <!-- Wizard container -->
+		            <div class="wizard-container">
+		                <div class="card wizard-card" data-color="red" id="wizard">
+		                    <form action="" method="">
+		                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+		                    	<div class="wizard-header">
+		                        	<h3 class="wizard-title">
+		                        		Crypto Tools
+		                        	</h3>
+									<h5>This information will let us know more about you.</h5>
+		                    	</div>
+								<div class="wizard-navigation">
+									<ul>
+			                            <li id="converter_link"><a href="#converter" data-toggle="tab">Converter</a></li>
+			                            <li id="trends_link"><a href="#trends" data-toggle="tab">Coin Explorer</a></li>
+			                            <li id="description_link"><a href="#description" data-toggle="tab">Market Details</a></li>
+			                        </ul>
+								</div>
+
+		                        <div class="tab-content">
+		                            <div class="tab-content">
+										<div class="tab-pane" id="converter">
+											<div class="row">
+												<div class="col-sm-12">
+													<h4 class="info-text"> Choose your conversion </h4>
+												</div>
+												<div class="col-sm-6">
+													<div class="input-group">
+														<span class="input-group-addon">
+														</span>
+														<div class="form-group label-floating">
+															<label class="control-label">Currency</label>
+															<select id="fromCurrencyType" class="form-control">
+																<option disabled="" selected=""></option>
+																
+																
+															</select>
+														</div>
+													</div>
+													<div class="input-group">
+														<span class="input-group-addon">
+															<!--<i class="material-icons">email</i>-->
+														</span>
+														<div class="form-group label-floating">
+															<input id="fromCurrencyInput" name="name" placeholder="0.00" type="number" class="form-control">
+														</div>
+													</div>
+													<!--
+													<div class="input-group">
+														<span class="input-group-addon">
+															<i class="material-icons">lock_outline</i>
+														</span>
+														<div class="form-group label-floating">
+															<label class="control-label">Your Password</label>
+															<input name="name2" type="password" class="form-control">
+														</div>
+													</div>
+													-->
+												</div>
+												<div class="col-sm-6">
+													<div class="input-group">
+														<span class="input-group-addon">
+															<!--<i class="material-icons">email</i>-->
+														</span>
+														<div class="form-group label-floating">
+														
+															<label class="control-label">Currency</label> 
+															<select class="form-control" id="toCurrencyType">
+																<option disabled="" selected=""></option>
+																<option value="usd" > U.S Dollar (USD) </option>
+																
+															</select>
+														</div>
+													</div>
+													
+													<div class="input-group">
+														<span class="input-group-addon">
+															<!--<i class="material-icons">email</i>-->
+														</span>
+														<div class="form-group label-floating">
+															<!-- <label class="control-label">0.00</label> -->
+															<input name="name" id="toCurrencyInput" placeholder="0.00" type="number" class="form-control">
+														</div>
+													</div>
+													
+												</div>
+											</div>
+											
+										</div>
+		                            <div class="tab-pane" id="trends">
+		                                <h4 class="info-text">What type of crypto would you want? </h4>
+										<div class="form-group label-floating">
+															<label class="control-label">Currency</label>
+															<select id="chartCurrencyType" class="form-control">
+																<option disabled="" selected=""></option>
+																
+																
+															</select>
+										</div>
+		                                <!--<div class="row">
+		                                    <div class="col-sm-10 col-sm-offset-1">
+		                                        <div class="col-sm-4">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="This is good if you travel alone.">
+		                                                <input type="radio" name="job" value="Design">
+		                                                <div class="icon">
+		                                                    <i class="material-icons">weekend</i>
+		                                                </div>
+		                                                <h6>Single</h6>
+		                                            </div>
+		                                        </div>
+		                                        <div class="col-sm-4">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Select this room if you're traveling with your family.">
+		                                                <input type="radio" name="job" value="Code">
+		                                                <div class="icon">
+		                                                    <i class="material-icons">home</i>
+		                                                </div>
+		                                                <h6>Family</h6>
+		                                            </div>
+		                                        </div>
+												<div class="col-sm-4">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Select this option if you are coming with your team.">
+		                                                <input type="radio" name="job" value="Code">
+		                                                <div class="icon">
+		                                                    <i class="material-icons">business</i>
+		                                                </div>
+		                                                <h6>Business</h6>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                </div> -->
+										
+		                            </div>
+		                            <div class="tab-pane" id="description">
+		                                <div class="row">
+		                                    <h4 class="info-text"> Coin markets will explain you more</h4>
+											<div class="form-group label-floating">
+															<label class="control-label">Currency</label>
+															<select id="marketCurrencyType" class="form-control">
+																<option disabled="" selected=""></option>
+																
+																
+															</select>
+											</div>
+		                                    <!--
+											<div class="col-sm-6 col-sm-offset-1">
+	                                    		<div class="form-group">
+		                                            <label>Room description</label>
+		                                            <textarea class="form-control" placeholder="" rows="6"></textarea>
+		                                        </div>
+		                                    </div>
+		                                    <div class="col-sm-4">
+		                                    	<div class="form-group">
+		                                            <label class="control-label">Example</label>
+		                                            <p class="description">"The room really nice name is recognized as being a really awesome room. We use it every sunday when we go fishing and we catch a lot. It has some kind of magic shield around it."</p>
+		                                        </div>
+		                                    </div>
+											-->
+		                                </div>
+		                            </div>
+		                        </div>
+	                        	<div class="wizard-footer">
+	                            	<div class="pull-right">
+										<br><br>
+	                                    <!--<input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
+	                                    <input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />-->
+	                                </div>
+	                                <div class="pull-left">
+	                                    <!--<input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />-->
+
+										<div class="footer-checkbox">
+											<div class="col-sm-12">
+											  <div class="checkbox">
+												  <label>
+													  <input type="checkbox" id="autoupdate" value="blah blah" />
+												  </label>
+												  Auto Update
+											  </div>
+										  </div>
+										</div>
+	                                </div>
+	                                <div class="clearfix"></div>
+	                        	</div>
+		                    </form>
+		                </div>
+		            </div> <!-- wizard container -->
+		        </div>
+	    	</div> <!-- row -->
+		</div> <!--  big container -->
+
+	    <div class="footer">
+	        <div class="container text-center">
+	             Made with <i class="fa fa-heart heart"></i> by <b>Team@Crytocurrencykart </b>
+	        </div>
+	    </div>
+	</div>
+</body>
+
+	<script>
+		
+		$(document).ready( function(){ 
+			
+			var cryptoCurrencyData;
+			var currencyData;
+			
+			$.getJSON("http://coincap.io/front", function(jsonObj){
+				console.log(jsonObj);
+				cryptoCurrencyData = jsonObj;
+				
+				$.each(cryptoCurrencyData, function(i, field){
+					console.log(" >> "+i);
+					$("#fromCurrencyType").append( new Option(field.long+" ("+field.short+")", field.short.toLowerCase()) );
+					$("#chartCurrencyType").append( new Option(field.long+" ("+field.short+")", field.short.toLowerCase()) );
+					$("#marketCurrencyType").append( new Option(field.long+" ("+field.short+")", field.short.toLowerCase()) );
+				});
+			
+			});
+			$.getJSON("http://www.floatrates.com/daily/usd.json", function(jsonObj){
+				currencyData = jsonObj;
+				//console.log(jsonObj);
+				$.each(currencyData, function(i, field){
+					//console.log(" >> "+ i + "\t field: "+field.code);
+					
+					$("#toCurrencyType").append( new Option(field.name+" ("+i+")", i.toLowerCase()) );
+				});
+				
+			});
+			
+			$("#fromCurrencyType").change(function () {
+				doConvert();
+			});
+			$("#toCurrencyType").change(function () {
+				doConvert();
+			});
+			
+			$("#fromCurrencyInput").keyup(function(){
+				doConvert();
+			});
+			
+			function doConvert(){
+				var inp = $("#fromCurrencyInput").val();
+				var fromcurr = $("#fromCurrencyType").val();
+				var tocurr = $("#toCurrencyType").val();
+				
+				console.log(" >> new ocde");
+				console.log(" >> " + inp + "\t\t "+fromcurr+ "\t\t "+tocurr);
+				if(fromcurr == null || tocurr == null){
+					if (inp != ""){
+						alert("Choose Currency!");
+						$("#fromCurrencyInput").val(null);
+						$("#toCurrencyInput").val(null);
+					}
+				}
+				else if (fromcurr != null){
+				
+					$("#toCurrencyInput").val(inp);
+					var actualExchangeRate = 0;
+					var coinExchangeRate = 0;
+					var resultAmt = 0;
+					$.each(cryptoCurrencyData, function(i, field){
+						if(fromcurr == field.short.toLowerCase()){
+							coinExchangeRate = field.price;
+							console.log(" >> usd: "+field.price);
+						}
+					});
+					
+					if(tocurr == "usd"){
+						actualExchangeRate = coinExchangeRate;
+						resultAmt = inp * actualExchangeRate;
+					}
+					else{
+						console.log(" >> coinExchangeRate  "+ coinExchangeRate);
+						var dollarExchangeRate = currencyData[tocurr].rate;
+						console.log(" >>  dollarExchangeRate "+ dollarExchangeRate);
+						actualExchangeRate = coinExchangeRate * dollarExchangeRate;
+						console.log(" >>  actualExchangeRate "+ actualExchangeRate);
+						resultAmt = inp * actualExchangeRate;
+						
+					}
+					
+					$("#toCurrencyInput").val(resultAmt);
+				}
+			}
+			
+			/*$(document).on('change', '.checkbox', function() {
+				if(this.checked) {
+				  // checkbox is checked
+				}
+			});
+			*/
+			
+			$("#autoupdate").change(function() {
+				
+				if(this.checked) {
+					//Do stuff
+					console.log(" >> Checked..");
+					
+					console.log("--> running auto udate");
+					setInterval(function(){
+						console.log(" >> Running Interval.. ");
+						if($("#autoupdate").checked){
+							console.log(" >> Updating...");
+							doConvert();
+						}
+						console.log(" >> 20 sec");
+					}, 20000);
+					
+				}
+				else{
+					console.log(" >> Uncheked: "+this.checked);
+					console.log(" >> Uncheked: "+$("#autoupdate").checked);
+					console.log(" >> auto update stopped");
+					alert("Autoupdate stopped");
+				}
+			});
+			
+			$("#converter_link").click(function(){
+				console.log(" >> autoupdate show");
+				$(".checkbox").show();
+			});
+			$("#trends_link").click(function(){
+				console.log(" >> autoupdate hide");
+				$(".checkbox").hide();
+			});
+			$("#description_link").click(function(){
+				console.log(" >> autoupdate hide");
+				$(".checkbox").hide();
+			});
+			
+		});
+
+
+	</script>
+</html>
